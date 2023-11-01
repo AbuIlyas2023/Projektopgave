@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projekt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Her laver jeg det, som har relation til min navigations bar -->
+    <div class="logo">
+        <a href="">Socialdemokratiet</a>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="projekt.html" class="active">Om mig</a>
+        <a href="mærkesager.html">Mærkesager</a>
+        <a href="about.html">Kontakt</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+<!-- Her kommer bottom-nav -->
+      <div class="bottomnav">
+      </div>
+      <div class="content">
+      </div>
+
+
+<!-- Nu laver jeg forsidens tekst, som jeg har valgt a kalde "Om mig" -->
+
+<div class="politiker-info">
+  <div class="portrait">
+    <img src="Magnus.jpeg" alt="Politiker portræt">
+    <div>
+      <button class="btn" id="downloadButton">
+        <i class="fa fa-download"></i> Download
+      </button>
+    </div>
+  </div>
+  <div class="info">
+      <h1>
+          <i class></i> Magnus Heunicke
+      </h1>
+      <p>Magnus Johannes Heunicke er socialdemokratisk minister og folketingsmedlem</p>
+      <ul class="contact-info">
+          <li><i class="fa fa-envelope"></i> Miljoeministeren@mim.dk</li>
+          <li><i class="fa fa-phone"></i> +45 3814 2142</li>
+          <li><i class="fa fa-map-marker"></i> Miljøministeriet, Frederiksholms Kanal 26 1220 København K </li>
+      </ul>
+      <p><strong>Stilling:</strong> Folketingsmedlem - Miljøminister</p>
+  </div>
+</div>
+
+<!-- Nu vil jeg lave en accordion under mit billede -->
+<div class="accordion-container">
+  <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(1)">CV</div>
+      <div class="accordion-content" id="content1">
+        <p>Magnus Johannes Heunicke, født 28. januar 1975 i Næstved, søn af borgmester Henning Jensen og specialklasselærer Inger Heunicke. Gift med direktør Nina Groes. Far til Ella Heunicke Groes og Rakel Heunicke Groes.</p>
+        <h3>Medlemsperiode</h3><p>
+          Folketingsmedlem for Socialdemokratiet i Sjællands Storkreds fra 13. november 2007.
+          Folketingsmedlem for Socialdemokratiet i Storstrøms Amtskreds, 8. februar 2005 – 13. november 2007.
+          Kandidat for Socialdemokratiet i Næstvedkredsen fra 2004.</p>
+          <h3>Parlamentarisk karriere</h3> 
+          <p>Miljøminister fra 15. december 2022.
+Sundhedsminister, 21. januar 2021 – 15. december 2022.
+Sundheds- og ældreminister, 27. juni 2019 – 21. januar 2021.
+Transportminister, 3. februar 2014 – 28. juni 2015.
+Statsrevisor, 13. august 2013 – 2. februar 2014.
+Næstformand for Udvalget for Videnskab og Teknologi, 2005-2007.
+Tidligere politisk ordfører, trafikordfører, it- og teleordfører, velfærdsordfører, kommunalordfører og ordfører vedrørende landdistrikter og øer.</p>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(2)">Forslag, taler og spørgsmål</div>
+      <div class="accordion-content" id="content2">
+        <a href="https://www.ft.dk/medlemmer/mf/m/magnus-heunicke/dokumenter/paragraf_20_spoergsmaal?mi={9C79864B-723D-41E8-BAB4-169C4A4DA675}" class="spørgsmål">Alle §20-spørgsmål</a>
+        <br>
+        <a href="https://www.ft.dk/medlemmer/mf/m/magnus-heunicke/dokumenter/udvalgsspoergsmaal?mi={9C79864B-723D-41E8-BAB4-169C4A4DA675}" class="spørgsmål">Udvalgsspørgsmål</a>
+        <br>
+        <a href="https://www.ft.dk/medlemmer/mf/m/magnus-heunicke/dokumenter/samraadsspoergsmaal?mi={9C79864B-723D-41E8-BAB4-169C4A4DA675}" class="spørgsmål">Samrådsspørgsmål</a>
+        <br>
+        <a href="https://www.ft.dk/medlemmer/mf/m/magnus-heunicke/dokumenter/alle_spoergsmaal?mi={9C79864B-723D-41E8-BAB4-169C4A4DA675}" class="spørgsmål">Alle spørgsmål</a>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(3)">Hverv og økonomiske interesser</div>
+      <div class="accordion-content" id="content3">
+        <h3>Minister</h3>
+          <a href="https://www.regeringen.dk/ministrene" class="minister">Se oplysninger om ministrenes personlige økonomiske interesser m.v. på Regeringens hjemmeside.</a>
+      </div>
+  </div>
+
+  <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(4)">Om biografierne</div>
+      <div class="accordion-content" id="content4">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+      </div>
+  </div>
+</div>
+
+<!-- Her kommer JavaScript til min TopNav -->
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+
+<!-- Her laver jeg script til download knappen  -->
+        <script>
+                  document.getElementById('downloadButton').addEventListener('click', function() {
+    var image = document.querySelector('.portrait img');
+    var link = document.createElement('a');
+    link.href = image.src;
+    link.download = 'Magnus.jpeg'; // Navnet på den downloadede fil
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+        </script>
+
+<script>
+  function toggleAccordion(id) {
+      var content = document.getElementById('content' + id);
+      content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+  }
+</script>
+        
+</body>
+</html>

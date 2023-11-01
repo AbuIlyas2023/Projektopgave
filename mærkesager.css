@@ -1,0 +1,83 @@
+:root {
+  --socialdemokratiets-farve: #bb4752;
+  --background-color: #e8eaea;
+  --text-color: #333;
+  --accordion-color: #white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Change to column for mobile view */
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  background-size: 100%; /* Set background size to cover entire box */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.box-content img {
+  max-width: 100%; /* Set maximum width to 100% of container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+.box-content {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.box-content h2 {
+  margin: 0;
+}
+
+.box-content p {
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow boxes to wrap in a row */
+  }
+
+  .box {
+    width: calc(50% - 40px); /* Make boxes half width for tablets and larger screens */
+  }
+}
+
+
+.box-content h2 {
+  margin: 0;
+}
+
+.box-content p {
+  margin: 10px 0;
+}
+
+#box1 {
+  background-image: url('Magnus.jpeg');
+}
+
+#box2 {
+  background-image: url('Martin.jpeg');
+}
+
+#box3 {
+  background-image: url('Magnus_Heunicke\ -\ Fotograf\ Steen_Brogaard.jpg');
+}
+
+#box4 {
+  background-image: url('Magnus.jpeg');
+}

@@ -1,0 +1,364 @@
+/* root kan ikke styles men et sted man kan definerer noget */
+:root{
+  --socialdemokratiets-farve: #bb4752;
+  --background-color: #e8eaea;
+  --text-color: #333;
+  --accordion-color: #white;
+ }
+ 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; 
+  background-color: white; /* Denne kommand indstiller baggrundsfarven for hele body */
+}
+
+
+/* Jeg laver topnav og bottom nav, som det første - Her følger topnav */
+.topnav {
+  overflow: hidden;
+  background-color: var(--socialdemokratiets-farve);
+  display: flex;
+  justify-content: flex-end;
+}
+
+ /* Style navigation menu links */
+ .topnav a{
+   color: #f2f2f2;
+   text-decoration: none;
+   text-align: center;
+   padding: 14px 16px;
+   font-size: 17px;
+   float: left;
+ }
+ 
+ .topnav a:hover{
+   background-color: #ddd;
+   color: ddd;
+ }
+ /* Style the hamburger menu */
+ .topnav .icon{
+   display: none;
+   color: white;
+ }
+ 
+ .active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+ .logo{
+   /* Logo bliver placeret et sted og er ligeglad med alt andet. Absoloute skal defineres til skærmen størrelse eksempelvis */
+   position: absolute;
+   top: 15px;
+   bottom: 15px;
+   padding-left: 15px;
+   font-size: large;
+ }
+ 
+ .logo a{
+   color: whitesmoke;
+   text-decoration: none;
+ }
+ 
+
+ 
+ /* Her kommer bottom-nav */
+
+ .bottomnav {
+  overflow: hidden;
+  background-color: var(--socialdemokratiets-farve);
+  display: flex;
+  justify-content: space-between; /* Justerer elementer til at være spredt ud */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottomnav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+ /* Her anvender jeg kommando for at gøre min side mobile first brugervenlig. Der er blandt andet fokus på Hamburger Menuen */
+ @media screen and (max-width: 800px) { 
+   .topnav .icon {
+     display: block;
+     font-size: 1.4rem;
+   }
+   .topnav a{
+     display: none;
+   }
+ 
+   .responsive a{
+     display: flex;
+     font-size: 1.1rem;
+   }
+ 
+   .responsive {
+     flex-direction: column;
+     align-items: center;
+     padding: 60px;
+     padding-bottom: 0;
+   }
+ 
+   .responsive .icon{
+     position: absolute;
+     top: 0;
+     right: 0;
+   }
+ }
+
+
+  @media screen and (max-width: 800px) {
+    .politiker-info .btn {
+      width: 100%; /* Make the button full width */
+      margin-left: 0; /* Remove left margin */
+      margin-right: 0; /* Remove right margin */
+    }
+
+    .politiker-info .portrait img {
+      margin-left: 0; /* Remove left margin */
+      margin-right: 0; /* Remove right margin */
+    }
+
+    .politiker-info .info {
+      text-align: left; /* Center align text */
+      margin-right: 10px;
+      margin-left: 20px;
+    }
+
+    .politiker-info .info h1 {
+      font-size: 1.5em; /* Decrease font size */
+    }
+
+    .politiker-info .info p {
+      font-size: 1em; /* Decrease font size */
+      line-height: 1.4; /* Adjust line height */
+    }
+
+    .politiker-info .contact-info {
+      margin-top: 20px; /* Add some space at the top */
+      text-align: left; /* Center align contact info */
+      align-items: left;
+      font-size: small;
+    }
+
+    .politiker-info .contact-info li {
+      display: inline-block; /* Display contact info items side by side */
+      margin-right: 10px; /* Add some space between items */
+    }
+
+    .politiker-info .contact-info li strong {
+      font-weight: bold; /* Make contact info labels bold */
+      margin-right: 5px; /* Add some space between label and value */
+    }
+
+    .politiker-info .fa {
+      width: 20px; /* Adjust icon size if needed */
+      height: 20px; /* Adjust icon size if needed */
+    }
+  }
+
+ @media (max-width: 767px) {
+  /* Styles for screens smaller than 768px (phones) */
+  .accordion-container {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+  .accordion-header {
+    padding: 10px 30px 10px 10px; /* Adjust padding for smaller screens */
+  }
+  .accordion-content {
+    max-height: none; /* Remove maximum height on content for smaller screens */
+    overflow: visible; /* Allow content to expand */
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .accordion-header {
+    font-size: 16px;
+  }
+  .accordion-content {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .accordion-container {
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+  .accordion-header {
+    padding: 10px 30px 10px 10px; /* Adjusted padding for smaller screens */
+  }
+  .accordion-content {
+    max-height: none; /* Remove maximum height on content for smaller screens */
+    overflow: visible; /* Allow content to expand */
+  }
+  
+  /* Adjust font sizes for smaller screens */
+  .accordion-header {
+    font-size: 16px;
+  }
+  .accordion-content {
+    font-size: 14px;
+  }
+}
+
+/* Nu vil jeg lave min forside, som skal omhandle poltikkeren under siden "Om mig" */
+
+.politiker-info {
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Gør main container til en flex-container */
+  align-items: center; /* Centrer elementerne lodret */
+  padding-bottom: 50px;
+}
+
+/* Knappen til download bliver style  */
+.btn {
+  background-color: var(--socialdemokratiets-farve);
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 200px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* Grøn knap når musen kommer over */
+.btn:hover {
+  background-color: #04AA6D;
+}
+
+.portrait {
+  position: relative; /* Set the container to relative positioning */
+}
+
+.portrait img {
+  max-width: 100vw;
+  border-radius: 50%;
+  border: 10px solid #bb4752;
+  width: 200px; /* Set a fixed width */
+}
+
+.info {
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.info h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 5px;
+}
+
+.contact-info li strong {
+  margin-right: 5px;
+}
+
+.fa {
+  width: 20px; /* Adjust to your desired size */
+  height: 20px; /* Adjust to your desired size */
+}
+
+
+/* Nu laver jeg min accodion */
+
+/* Accordion Container */
+.accordion-container {
+  border-radius: 5px;
+  padding: 30px;
+  padding-bottom: 260px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  background-color: var(--socialdemokratiets-farve);
+  color: #000; /* Changed text color to black */
+  overflow-y: auto; /* Added vertical scrollbar if content overflows */
+}
+
+
+/* Accordion Item */
+.accordion-item {
+  border: 0.5px solid white;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Added spacing between items */
+  margin-top: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Accordion Header */
+.accordion-header {
+  position: relative;
+  padding: 10px 40px 10px 10px; /* Adjusted padding for space for icon */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Accordion Header Icon */
+.accordion-header::after {
+  content: '\f067'; /* FontAwesome plus icon */
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+  content: '\f068'; /* FontAwesome minus icon */
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Accordion Content */
+.accordion-content {
+  text-align: justify;
+  display: none;
+  padding: 10px;
+  max-height: 200px; /* Set the maximum height as per your preference */
+  overflow: auto; /* Enable scrolling if content overflows */
+  cursor: text;
+}
+
+.spørgsmål{
+  text-decoration: none;
+  color: var(--socialdemokratiets-farve);
+}
+
+.spørgsmål:hover{
+  color: #04AA6D;
+  text-decoration: underline;
+}
+
+.minister{
+  text-decoration: none;
+  color: var(--socialdemokratiets-farve);
+}
+
+.minister:hover{
+  color: #04AA6D;
+  text-decoration: underline;
+}
