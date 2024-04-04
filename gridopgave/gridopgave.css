@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+  background-color: #ddd;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 400px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Et punkt efter grid-template-areas giver et blank område */
+
+.grid-items {
+  background-color: #333;
+  padding: 15px;
+  color: antiquewhite;
+  font-size: 2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.one {
+  grid-column: 1 / 2; /* Set grid item 1 to span from column 1 to column 3 */
+  grid-row: span 2;
+  font-size: 15px;
+  text-align: center;
+}
+
+.two {
+  grid-column: 4 / 5; /* Set grid item 2 to span from column 3 to column 5 */
+  grid-row: span 2;
+  font-size: 15px;
+  text-align: center  ;
+}
+
+
+.three{
+  grid-column: 1/5;
+  grid-row: span 3;
+}
+
+.ptekst{
+  font-size: 15px;
+}
+
+.ptekstimg{
+  font-size: 10px;
+}
+
+.four, .five, .six, .seven, .eight, .nine{
+  grid-column: span 2;
+}
+
+.ten{
+  grid-column: span 4;
+  text-align: center;
+  font-size: 15px;
+}
+
+.grid-image {
+  max-width: 100%; /* Set the maximum width of the image to be 100% of its container */
+  height: auto; /* Allow the height to adjust automatically based on the aspect ratio */
+}
+
+
+@media (max-width: 300px) {
+  .container {
+    max-width: 300px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat (2, 1fr) auto; /* Two rows with three boxes each, and a footer
+  }
+
+  .one,
+  .two {
+    grid-row: span 1; /* Set the grid item row span to 1 */
+  }
+
+  .three {
+    grid-column: 1 / 4; /* Set grid item 3 to span all columns in the first row */
+    grid-row: 2 / 3; /* Set grid item 3 to start at the second row and end at the third row */
+  }
+
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight,
+  .nine {
+    grid-column: span 1; /* Set the grid item column span to 1 */
+  }
+
+  .ten {
+    grid-column: span 3; /* Set grid item 10 to span all columns */
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) auto; /* Three rows with three boxes each, and a footer */
+  }
+
+  .one,
+  .two {
+    grid-row: span 1; /* Set the grid item row span to 1 */
+  }
+
+  .three {
+    grid-column: 1 / 4; /* Set grid item 3 to span all columns in the first row */
+    grid-row: 2 / 3; /* Set grid item 3 to start at the second row and end at the third row */
+  }
+
+  .four,
+  .five,
+  .six {
+    grid-column: span 1; /* Set the grid item column span to 1 */
+    grid-row: 3 / 6; /* Set grid items 7, 8, 9 to be on the third row */
+  }
+
+  .seven,
+  .eight,
+  .nine {
+    grid-column: span 1; /* Set the grid item column span to 1 */
+    grid-row: 6 / 9; /* Set grid items 7, 8, 9 to be on the third row */
+  }
+
+  .ten {
+    grid-column: span 3; /* Set grid item 10 to span all columns */
+    text-align: center;
+    font-size: 15px;
+  }
+}
